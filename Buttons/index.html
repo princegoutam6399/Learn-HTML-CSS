@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        .buttons button {
+            margin: 10px;
+            padding: 20px;
+            background-color: blueviolet;
+            /* border-radius: 10px; */
+            border: none;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .hover-btn:hover {
+            border-radius: 20px;
+            background-color: aquamarine;
+            transition: 0.5s;
+        }
+        .curvy-btn:hover{
+            transition: 0.5s;
+            padding: 20px;
+            border-radius: 0px 20px 10px 10px;
+            background-color: salmon;
+            color: white;
+        }
+        .curvy-btn2:hover{
+            transition: 0.5s;
+            padding: 20px;
+            border-radius: 40px 0px 40px 10px;
+            background-color: rgb(253, 155, 171);
+            color: rgb(7, 7, 7);
+        }
+        .circular:hover{
+            font-size: 20px;
+            padding: 30px;
+            border-radius: 50%;
+            background-color: lightgreen;
+        }
+        .outline:hover{
+            margin-left: 30px;
+            color: white;
+            color: white;
+            background-color: yellowgreen;
+            outline: 2px solid rgb(0, 188, 107);
+            font-size: 20px;
+        }
+        .transparent:hover{
+            outline: 2px solid black;
+            font-size: 20px;
+            background: transparent;
+        }
+        .gredient:hover{
+            color: white;
+            transition: 0.5s;
+            background: linear-gradient(150deg,purple,pink,yellowgreen,green,orange,skyblue);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="buttons">
+            <button class="but1"> I am a Button</button>
+            <button class="hover-btn"> I am a Hover Button</button>
+            <button class="curvy-btn"> I am a Curvy Button</button>
+            <button class="curvy-btn2"> I am a Curvy Button 2</button>
+            <button class="circular"> Circular Button</button>
+            <button class="outline">Outline Button</button>
+            <button class="transparent">Transparent Button</button>
+            <button class="gredient">Gradient Button</button>
+        </div>
+    </div>
+</body>
+
+</html>
