@@ -1,65 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
+    <title>Responsive Gallery</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        .name{
+
+        html,
+        body {
+            background-color: #fff;
+            padding: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        .card-items > div {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 20px;
         }
-        .card{
-            display:inline-flex;
-            grid-template-columns: repeat(3,1fr,1fr,1fr);
+
+        .card-items > div > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
         }
-        .card img{
-            box-shadow: 0px 20px 10px 30px solid rgb(157, 89, 89);
+
+        .card-items {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-auto-rows: 200px;
+            grid-auto-flow: dense;
         }
-        .card-items img{
-            margin: 20px;
-            width: 200px;
-            height: auto;
+
+        .card-items .wide{
+            grid-column: span 2;
+        }
+
+        .card-items .tall {
+            grid-row: span 2;
+        }
+
+        .card-items .big {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .text{
+            display: flex;
+            justify-content: center;
+            padding: 20px;
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="name">
-            <h2>Nature Gallery</h2>
+    <div class="text">
+        <h2>Responsive Image Gallery</h2>
+    </div>
+    <div class="card-items">
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2022/04/06/23/50/flower-7116555_640.jpg" alt="">
         </div>
-        <div class="card">
-            <div class="card-items">
-                <img src="/Gallery/img1.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet.</p>
-            </div>
-            <div class="card-items">
-                <img src="/Gallery/img1.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet.</p>
-            </div>
-            <div class="card-items">
-                <img src="/Gallery/img1.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet.</p>
-            </div>
-            <div class="card-items">
-                <img src="/Gallery/img1.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet.</p>
-            </div>
-            <div class="card-items">
-                <img src="/Gallery/img1.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet.</p>
-            </div>
-            <div class="card-items">
-                <img src="/Gallery/img1.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet.</p>
-            </div>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2024/03/16/20/35/ai-generated-8637800_640.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2019/03/19/19/54/butterflies-4066785_640.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2021/06/17/05/14/city-6342765_640.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2021/06/07/17/12/plant-6318497_640.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2019/05/03/15/55/leaves-4176219_640.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2022/07/13/22/27/butterfly-7320158_640.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2020/09/26/22/03/trees-5605176_640.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2016/04/22/13/16/mountain-1345746_640.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2022/07/12/07/06/lake-7316684_640.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2019/08/21/09/46/mountains-4420690_640.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2024/03/13/18/47/swans-8631580_640.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2024/03/31/06/16/bird-8666099_640.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2021/07/24/07/25/chow-chow-6488849_640.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2023/10/11/04/08/water-lilies-8307632_640.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2022/11/28/17/47/cosmos-7622740_640.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2024/03/22/16/58/lighthouse-8650151_640.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2019/04/25/20/48/tulip-4155890_640.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2024/04/18/20/41/ai-generated-8705017_640.png" alt="">
+        </div>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2023/09/21/14/15/background-8266762_640.jpg" alt="">
+        </div>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2018/01/28/08/12/nature-3112997_640.jpg" alt="">
         </div>
     </div>
 </body>
+
 </html>
