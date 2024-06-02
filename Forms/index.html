@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            /* background: url('https://cdn.pixabay.com/photo/2019/08/21/09/46/mountains-4420690_640.jpg'); */
+            background: linear-gradient(45deg, #1e90ff, #ff6347);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: auto;
+            position: relative;
+        }
+
+        .login-box {
+            position: relative;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 50px;
+            border-radius: 40px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+            text-align: center;
+
+        }
+        .text{
+            margin: 0 0 20px;
+            padding: 0;
+            color: white;
+            text-transform: uppercase;
+        }
+        .inputs{
+            position: relative;
+            margin-bottom: 10px;
+        }
+        .inputs input{
+            width: 100%;
+            padding:10px 0;
+            font-size: 18px;
+            color: white;
+            margin-bottom: 10px;
+            border: none;
+            border-bottom:1px solid white ;
+            outline: none;
+            background: transparent;
+        }
+        input::placeholder{
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: white;
+        }
+        .btn input{
+            background: transparent;
+            width: 100px;
+            margin-top: 20px;
+            text-align: center;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: #ff6347;
+            padding: 10px;
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+            font-size: 16px;
+            text-transform: uppercase;
+            transition: 0.5s;
+            border-radius: 10px;
+        }
+        .btn input:hover{
+            transition: 0.5s;
+            background: linear-gradient(45deg, #1e90ff, #ff6347);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-box">
+            <form>
+                <div class="text">
+                    <h2>Login</h2>
+                </div>
+                <div class="inputs">
+                    <input type="text" class="input" placeholder="Username">
+                </div>
+                <div class="inputs">
+                    <input type="text" class="input" placeholder="Password">
+                </div>
+                <div class="btn">
+                    <input type="text" class="input" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
