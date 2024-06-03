@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn{
+            padding: 15px;
+            background-color: lightgreen;
+
+            /* transition-property: transform;
+            transition-duration: 0.4s;
+            transition-timing-function: ease-in; */
+            /* transition-delay: 0.2s; */
+
+            transition: transform 0.3s ease 0s;
+        }
+        .btn:hover{
+            transform: translateY(-10px);
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">Learn More</button>
+</body>
+</html>

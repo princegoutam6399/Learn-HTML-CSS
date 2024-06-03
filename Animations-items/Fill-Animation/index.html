@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Fill Animation</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+        }
+        div{
+            margin: 2em auto;
+            width: 100px;
+            color: white;
+            font-size: 14px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 1em 0.5em;
+            cursor: pointer;
+        }
+        div{
+            background: linear-gradient(#252525,#252525 50%,#2ecc71 50%,#23ae5d);
+            background-size: 100% 200%;
+            text-align: center;
+            transition: background 1s;
+
+        }
+        div:hover{
+            background-position: 100% 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="btn">Demo</div>
+</body>
+</html>
