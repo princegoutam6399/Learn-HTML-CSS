@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Navbar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            background-color: rgb(127, 255, 174);
+            justify-content: space-between;
+        }
+        .logo{
+            cursor: pointer;
+            padding:20px;
+        }
+        ul li{
+            cursor: pointer;
+            display: inline-flex;
+            padding:20px;
+            font-size: 20px;
+        }
+
+        /* Second Navbar */
+
+        .nav-2{
+            margin-top: 20px;
+            background-color: yellowgreen;
+            justify-content: center;
+            display: flex;
+        }
+
+        /* Third Navbar */
+
+        .nav-3{
+            margin-top: 20px;
+            background-color: rgb(50, 169, 205);
+            justify-content:space-evenly;
+            display: flex;
+        }
+        .link a{
+            font-size: 20px;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h2>Netlify</h2>
+        </div>
+        <div class="list-items">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Blog</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+    </div>
+    <div class="nav-2">
+        <div class="list-item">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Blog</li>
+                <li>Article</li>
+            </ul>
+        </div>
+    </div>
+    <div class="nav-3">
+        <div class="name">
+            <h2>Glow Grove</h2>
+        </div>
+        <div class="list-item-2">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Blog</li>
+                <li>Services</li>
+            </ul>
+        </div>
+        <div class="link">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Github</a>
+        </div>
+    </div>
+</body>
+</html>
