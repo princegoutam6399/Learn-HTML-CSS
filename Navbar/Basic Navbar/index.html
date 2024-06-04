@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <style>
         *{
@@ -34,20 +35,31 @@
             justify-content: center;
             display: flex;
         }
+        .list-item ul li{
+            margin-left: 25px;
+        }
 
         /* Third Navbar */
 
         .nav-3{
             margin-top: 20px;
             background-color: rgb(50, 169, 205);
-            justify-content:space-evenly;
             display: flex;
+            justify-content:space-between;
         }
-        .link a{
-            font-size: 20px;
-            text-decoration: none;
+        .name{
+            padding: 20px;
+            cursor: pointer;
+        }
+        .social-icon{
+            padding: 20px;
+            cursor: pointer;
+            font-size: 25px;
+        }
+        .social-icon i{
             margin-left: 10px;
         }
+        
     </style>
 </head>
 <body>
@@ -86,10 +98,10 @@
                 <li>Services</li>
             </ul>
         </div>
-        <div class="link">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">Github</a>
+        <div class="social-icon">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-twitter"></i>
         </div>
     </div>
 </body>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Effect Navbar</title>
+    <style>
+        .glass-effect{
+            background-color: rgb(221, 195, 195);
+            color: white;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .logo{
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .glass-effect:hover{
+            backdrop-filter: blur(10px);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="glass-effect">
+        <div class="logo">
+            <h2>Netlify</h2>
+        </div>
+        <div class="list-items">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Blog</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
