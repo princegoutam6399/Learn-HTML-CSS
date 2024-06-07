@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid In CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        .container{
+            display: inline-block;
+            justify-content: center;
+            width: 500px; 
+        }
+ 
+        .container .box{
+            display: inline-grid; 
+        }
+        
+
+        .box{
+            margin: 5px;
+            padding: 5px;
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box-1 {
+            background-color: yellow;
+        }
+
+        .box-2 {
+            background-color: plum;
+        }
+
+        .box-3 {
+            background-color: greenyellow;
+        }
+
+        .box-4 {
+            background-color: orchid;
+        }
+
+        .box-5 {
+            background-color: orange;
+        }
+
+        .box-6 {
+            background-color: papayawhip;
+        }
+
+        .box-7 {
+            background-color: lawngreen;
+        }
+
+        .box-8 {
+            background-color: lightcoral;
+        }
+
+        .box-9 {
+            background-color: skyblue;
+        }
+        .box-10 {
+            background-color: rgb(135, 235, 190);
+        }
+        .box-11 {
+            background-color: rgb(235, 188, 135);
+        }
+        .box-12 {
+            background-color: rgb(200, 235, 135);
+        }
+        </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+        <div class="box box-4">4</div>
+        <div class="box box-5">5</div>
+        <div class="box box-6">6</div>
+        <div class="box box-7">7</div>
+        <div class="box box-8">8</div>
+        <div class="box box-9">9</div>
+        <div class="box box-10">10</div>
+        <div class="box box-11">11</div>
+        <div class="box box-12">12</div>
+    </div>
+</body>
+
+</html>
