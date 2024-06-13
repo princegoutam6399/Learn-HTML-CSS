@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swipe-up text animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .nav {
+            color: white;
+            background-image: url('/Landing\ Page/img5.jpg');
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo {
+            margin-left: 20px;
+            padding: 10px;
+        }
+
+        ul li {
+            color: white;
+            list-style: none;
+            display: inline-flex;
+            padding: 10px;
+            margin-right: 20px;
+        }
+
+        #about {
+            text-align: center;
+            padding: 20px;
+            /* background-color: rgb(195, 213, 207); */
+            height: 100vh;
+        }
+
+        #blog {
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(123, 255, 0);
+            height: 100vh;
+        }
+
+        #contact {
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(211, 233, 64);
+            height: 100vh;
+        }
+
+        #about h2{
+            padding: 20px;
+        }
+        #img{
+            width: 300px;
+        }
+        .text{
+            margin-top: 20px;
+        }
+        .card{
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .card-items img{
+            width: 300px;
+        }
+        #blog .form{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            background-color: rgb(174, 109, 235);
+            height: 300px;
+            width: 300px;
+        }
+        .form input{
+            margin:10px;
+            font-size: 20px;
+        }
+        .msg{
+            height: 50px;
+            width: 250px;
+        }
+        .btn input{
+            justify-content: center;
+            padding: 6px;
+            width:100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="logo">
+                <h2>Scaller</h2>
+            </div>
+            <div class="list">
+                <ul>
+                    <a href="#index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="#about">
+                        <li>About</li>
+                    </a>
+                    <a href="#blog">
+                        <li>Blog</li>
+                    </a>
+                    <a href="#contact">
+                        <li>Contact Us</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main">
+            <div id="about">
+                    <h2>About us</h2>
+                    <img src="https://cdn.pixabay.com/photo/2022/07/12/07/06/lake-7316684_640.jpg" alt="" id="img">
+                    <div class="text">
+                        <p>They define landscapes, people risk their lives to climb them ,<br> and they can even make their own weather. The mighty chunks rise all <br>over the world, including the oceans. They usually have steep, <br>sloping sides and sharp or rounded ridges, and a high point, called a peak or summit.</p>
+                    </div>
+
+            </div>
+            <div id="blog">
+                <h2>My Blog </h2>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia blanditiis, aliquid recusandae <br> esse nemo repellat nulla saepe mollitia quidem ut.</p>
+                </div>
+                <div class="card">
+                    <div class="card-items">
+                        <img src="https://cdn.pixabay.com/photo/2022/09/04/22/42/meadow-7432891_640.jpg" alt="">
+                        <div class="text">
+                            <p>Lorem ipsum dolor sit amet consectetur,<br> adipisicing elit. Debitis, aliquid?</p>
+                        </div>
+
+                    </div>
+                    <div class="card-items">
+                        <img src="https://cdn.pixabay.com/photo/2016/01/01/19/18/sunrise-1116985_640.jpg" alt="">
+                        <div class="text">
+                            <p>Lorem ipsum dolor sit amet consectetur,<br> adipisicing elit. Debitis, aliquid?</p>
+                        </div>
+                    </div>
+                    <div class="card-items">
+                        <img src="https://cdn.pixabay.com/photo/2021/06/17/05/14/city-6342765_640.jpg" alt="">
+                        <div class="text">
+                            <p>Lorem ipsum dolor sit amet consectetur,<br> adipisicing elit. Debitis, aliquid?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contact">
+                <h2>Contact Us</h2>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga id dolorum <br> quidem tenetur provident, tempore mollitia deserunt enim odio obcaecati?</p>
+                </div>
+                <div class="form">
+                    <form action="">
+                        Name : <input type="text"> <br>
+                        Email : <input type="text"><br>
+                        Message : <input type="text" class="msg">
+                        <div class="btn">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
