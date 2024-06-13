@@ -1,11 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scroll Bar</title>
+    <title>Scrolling Items</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ul li {
+            display: inline-flex;
+            padding: 10px;
+        }
+
+        .Home {
+            padding: 10px;
+            background-color: rgb(255, 255, 127);
+            height: 100vh;
+        }
+
+        .About {
+            padding: 10px;
+            background-color: aquamarine;
+            height: 100vh;
+        }
+
+        .Contact {
+            padding: 10px;
+            background-color: rgb(214, 255, 127);
+            height: 100vh;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="list">
+            <ul>
+                <a href="#home">
+                    <li>Home</li>
+                </a>
+                <a href="#about">
+                    <li>About</li>
+                </a>
+                <a href="#contact">
+                    <li>Contact Us</li>
+                </a>
+            </ul>
+        </div>
+        <div class="Home" id="home">
+            <h2>Home</h2>
+        </div>
+        <div class="About" id="about">
+            <h2>About </h2>
+        </div>
+        <div class="Contact" id="contact">
+            <h2>Contact Us</h2>
+        </div>
+    </div>
 </body>
+
 </html>
