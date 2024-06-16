@@ -10,8 +10,17 @@
             margin: 0;
             padding: 0;
         }
-        html{
+
+        html {
             scroll-behavior: smooth;
+        }
+
+        .main {
+            transition: 0.5s;
+        }
+
+        .main:hover {
+            transition: 0.5s;
         }
 
         .nav {
@@ -22,28 +31,55 @@
             display: flex;
             justify-content: space-between;
         }
-        .logo{
+
+        .logo {
             margin-left: 20px;
             padding: 10px;
         }
-        ul li{
+
+        ul li {
             color: white;
             list-style: none;
             display: inline-flex;
             padding: 10px;
             margin-right: 20px;
+            font-size: 20px;
         }
-        #about{
+
+        #about {
+            display: flex;
+            font-size: 20px;
+            text-align: center;
             padding: 20px;
             background-color: aquamarine;
             height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        #blog{
+
+        .text {
+            transition-delay: 0.5s;
+            transition-duration: 0.5s;
+        }
+
+        #blog {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            text-align: center;
             padding: 20px;
             background-color: rgb(123, 255, 0);
             height: 100vh;
         }
-        #contact{
+
+        #contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            text-align: center;
             padding: 20px;
             background-color: rgb(211, 233, 64);
             height: 100vh;
@@ -55,7 +91,7 @@
     <div class="container">
         <div class="nav">
             <div class="logo">
-                <h2>Scaller</h2>
+                <h1>Scaller</h1>
             </div>
             <div class="list">
                 <ul>
@@ -77,22 +113,49 @@
 
         <div class="main">
             <div id="about">
-                <h2>About Me</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, fuga? Voluptatem nam libero ratione ipsum necessitatibus voluptates beatae deleniti optio, doloribus eaque nihil vitae excepturi, incidunt facere ipsam. Vero obcaecati, similique quidem, sed dicta nobis consequuntur magnam ex dolore nostrum repellat voluptatum non ducimus aliquid expedita! In esse hic adipisci quaerat distinctio aliquid qui dicta quae tenetur beatae. Eos, exercitationem.</p>
+                <div class="text">
+                    <h1>About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, fuga? Voluptatem nam libero
+                        ratione
+                        ipsum necessitatibus voluptates beatae deleniti optio, doloribus eaque nihil vitae excepturi,
+                        incidunt facere ipsam. Vero obcaecati, similique quidem, sed dicta nobis consequuntur magnam ex
+                        dolore nostrum repellat voluptatum non ducimus aliquid expedita! In esse hic adipisci quaerat
+                        distinctio aliquid qui dicta quae tenetur beatae. Eos, exercitationem.</p>
+                </div>
 
             </div>
             <div id="blog">
-                <h2>Our Blog </h2>
-                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus sapiente debitis nam dignissimos consequatur dolorem dolores doloribus numquam, ipsam libero explicabo eius hic unde asperiores quas sunt architecto ipsum repellendus illum officia culpa quos magni incidunt nemo. Consequuntur magnam quasi, consequatur numquam aspernatur laudantium rem atque perferendis. Non repellendus veritatis ipsam recusandae harum sapiente repellat amet cum, consectetur temporibus totam distinctio, fuga, ea voluptate neque doloribus aliquid ad sunt similique nisi rem inventore earum. Quasi neque fuga blanditiis eius sequi distinctio saepe, pariatur nemo nobis, consequuntur, ex corrupti quia? Dolorem veritatis quo voluptas possimus aut, porro excepturi aperiam adipisci voluptatibus?</h4>
-
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis doloremque ducimus voluptatibus, dignissimos debitis nisi ut veniam quia odio sed quibusdam, distinctio ipsum quaerat ex dicta tempore unde. Commodi, dolorum repellat odit quibusdam quaerat necessitatibus maiores expedita velit optio hic animi provident voluptatum dolor a inventore! Velit doloremque vero iste!</p>
-            </div>
-
-            <div id="contact">
-                <h2>Contact Us</h2>
                 <div class="text">
+                    <h1>Our Blog </h1>
+                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus sapiente debitis nam dignissimos
+                        consequatur dolorem dolores doloribus numquam, ipsam libero explicabo eius hic unde asperiores
+                        quas
+                        sunt architecto ipsum repellendus illum officia culpa quos magni incidunt nemo. Consequuntur
+                        magnam
+                        quasi, consequatur numquam aspernatur laudantium rem atque perferendis. Non repellendus
+                        veritatis
+                        ipsam recusandae harum sapiente repellat amet cum, consectetur temporibus totam distinctio,
+                        fuga, ea
+                        voluptate neque doloribus aliquid ad sunt similique nisi rem inventore earum. Quasi neque fuga
+                        blanditiis eius sequi distinctio saepe, pariatur nemo nobis, consequuntur, ex corrupti quia?
+                        Dolorem
+                        veritatis quo voluptas possimus aut, porro excepturi aperiam adipisci voluptatibus?</h4>
+
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis doloremque ducimus
+                        voluptatibus, dignissimos debitis nisi ut veniam quia odio sed quibusdam, distinctio ipsum
+                        quaerat
+                        ex dicta tempore unde. Commodi, dolorum repellat odit quibusdam quaerat necessitatibus maiores
+                        expedita velit optio hic animi provident voluptatum dolor a inventore! Velit doloremque vero
+                        iste!
+                    </p>
+                </div>
+            </div>
+            <div id="contact">
+                <div class="text">
+                    <h1>Contact Us</h1>
                     <h4>+91 9876567876</h4>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos suscipit voluptates eius omnis eveniet velit ullam, consequuntur tempore saepe unde!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos suscipit <br> voluptates eius omnis
+                    eveniet velit ullam, consequuntur tempore saepe unde!
                 </div>
             </div>
         </div>
