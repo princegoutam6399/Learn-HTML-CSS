@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs Effect</title>
+    <style>
+        body{
+            display: flex;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background: #1c2841;
+        }
+        .container{
+            width: 680px;
+        }
+        .entryarea{
+            position: relative;
+            height: 40px;
+            line-height: 40px;
+        }
+        input{
+            width: 40%;
+            position: absolute;
+            line-height: 40px;
+            background: transparent;
+            border:2px solid white;
+            padding: 0 10px;
+            outline: none;
+            font-size: 22px;
+            border-radius: 10px;
+            color: aliceblue;
+            z-index: 1111;
+        }
+        .label{
+            position: absolute;
+            font-size: 16px;
+            color:white;
+            padding: 0 15px;
+            margin: 0 20px;
+            background-color: #1c2841;
+            transition: 0.2s ease;
+        }
+        input:focus 
+        ,input:valid{
+            color: #66ff00;
+            border: 2px solid #66ff00;
+        }
+        input:focus + .label
+        ,input:valid + .label{
+            color: #66ff00;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 20px;
+            transform: translate(-15px,-16px)scale(0.88);
+            z-index: 1111;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="entryarea">
+            <input type="text" required>
+            <div class="label">Enter your name</div>
+        </div>
+    </div>
+</body>
+</html>
