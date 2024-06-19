@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Hover Button</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            gap: 10px;
+        }
+        .btn{
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            letter-spacing:3px;
+            transition: 0.5s;
+        }
+        .btn-1{
+            border:2px solid lime;
+            color: lime;
+        }
+        .btn-2{
+            border: 2px solid rgb(233, 123, 233);
+            color: rgb(233, 123, 233);
+        }
+        .btn-3{
+           border:2px solid rgb(225, 37, 134);
+           color: purple;
+        }
+        .btn-1:hover{
+            background-color: rgb(58, 209, 220);
+            color: white;
+            transition: 0.5s;
+            border: 2px solid rgb(58, 209, 220);
+        }
+        .btn-2:hover{
+            transition: 0.5s;
+            background-color: rgb(233, 123, 233);
+            color: black;
+        }
+        .btn-3:hover{
+            background-color: brown;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn btn-1">Hover Me</button>
+    <button class="btn btn-2">Click Here</button>
+    <button class="btn btn-3">Excellent</button>
+</body>
+</html>
