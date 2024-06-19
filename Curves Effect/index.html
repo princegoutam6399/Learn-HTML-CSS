@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curves Effect</title>
+    <style>
+        body{
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        section{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 400px;
+            padding: 100px 20vw;
+        }
+
+        .blue{
+            background: #3c31dd;
+        }
+        .red{
+            background: #dd3f31;
+        }
+        .pink{
+            background: #ff0068;
+        }
+        
+        .curve{
+            position: absolute;
+            height: 225px;
+            width: 100%;
+            bottom: 0;
+        }
+        .curve::before{
+            content: "";
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background-color: #202731;
+            transform: translate(85%,60%);
+        }
+        .curve::after{
+            content: "";
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background-color: #3c31dd;
+            transform: translate(-4%,40%);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="blue">
+        <h1>Nice Curves</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat dolorem iure, beatae voluptatum dicta modi eligendi voluptate exercitationem molestiae quia amet natus cum aperiam facere aliquid sequi? Officia, libero fugit.</p>
+        <div class="curve"></div>
+    </section>
+    <section>
+        <h1>Nice Curves</h1>
+        <p>Odio ducimus ipsum dolorum deleniti recusandae beatae cupiditate! Ipsam ad vel doloribus in! Ab hic nobis incidunt et a! Laudantium rerum possimus quas temporibus quod sapiente quisquam at tenetur a?</p>
+    </section>
+    <section>
+        <h1>Nice Curves</h1>
+        <p>Quidem qui veniam perspiciatis quas nobis reprehenderit libero recusandae vel est eaque? Placeat fugiat veritatis eaque, quia, aut nam quasi ipsam nemo doloribus fuga ab omnis explicabo iusto accusamus optio.</p>
+    </section>
+    <section>
+        <h1>Nice Curves</h1>
+        <p>Amet soluta repudiandae, ut ullam voluptates velit similique molestias fugiat quis, exercitationem nam voluptatem ducimus earum consequatur, numquam suscipit unde repellendus. Aspernatur animi natus culpa odit reiciendis ipsa est aliquam.</p>
+    </section>
+    <section>
+        <h1>Nice Curves</h1>
+        <p>Facere, neque? Vel hic vero corporis impedit! Porro reiciendis ratione, perspiciatis laborum voluptatibus eveniet exercitationem, nemo dignissimos suscipit quia labore similique. Facere ullam dignissimos excepturi perferendis corrupti, ea quam possimus?</p>
+    </section>
+    <section>
+        <h1>Nice Curves</h1>
+        <p>Obcaecati, autem officiis! Ratione et, aut quas aperiam iste quae aliquam consectetur animi repudiandae. Quaerat quia vero deleniti a neque doloremque voluptates numquam culpa, soluta cum rem voluptatibus et odio?</p>
+    </section>
+    <section>
+        <h1>Nice Curves</h1>
+        <p>Hic doloribus perspiciatis nobis eos in praesentium sequi, libero harum nam ex, rerum odio aperiam excepturi mollitia ea alias ipsum rem nostrum delectus deserunt dolorem tenetur vitae aspernatur. Ex, laboriosam!</p>
+    </section>
+    <section>
+        <h1>Nice Curves</h1>
+        <p>Doloremque nisi nostrum accusantium blanditiis quis necessitatibus eius quod, obcaecati recusandae corporis earum iusto et quo voluptates delectus ad laborum ea reiciendis soluta ipsa culpa dignissimos odit amet dolorum? Odio!</p>
+    </section>
+
+</body>
+</html>
