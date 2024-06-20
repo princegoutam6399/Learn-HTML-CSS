@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Property</title>
+    <style>
+        .img{
+            display: inline-flex;
+            margin: 20px;
+            transition: 0.5s;
+        }
+        .img img{
+            width: 300px;
+        }
+        .img-1:hover{
+            transform: rotateX(180deg);
+            transition: 0.5s;
+        }
+        .img-2:hover{
+            transform: translateY(30px);
+            transition: 0.5s;
+            box-shadow: 6px 6px 8px rgb(158, 157, 152);
+        }
+        .img-3:hover{
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+        .img-4:hover{
+            transform:rotate(45deg);
+            transition: 0.5s;
+        }
+        .img-5:hover{
+            transform: skewX(10deg);
+            transition: 0.5s;
+        }
+        .img-6:hover{
+            transform: rotate(-40deg);
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="img img-1">
+        <img src="/Transform Property/img6.jpg" alt="">
+    </div>
+    <div class="img img-2">
+        <img src="/Transform Property/img2.jpg" alt="">
+    </div>
+    <div class="img img-3">
+        <img src="/Transform Property/img3.jpg" alt="">
+    </div>
+    <div class="img img-4">
+        <img src="/Transform Property/img4.jpg" alt="">
+    </div>
+    <div class="img img-5">
+        <img src="/Transform Property/img5.jpg" alt="">
+    </div>
+    <div class="img img-6">
+        <img src="/Transform Property/img6.jpg" alt="">
+    </div>
+</body>
+</html>
