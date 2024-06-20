@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Controls</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        audio{
+            padding: 300px;
+        }
+        audio::-webkit-media-controls-panel{
+            background-color: cornflowerblue;
+        }
+        audio::-webkit-media-controls-play-button{
+            background-color: skyblue;
+            border-radius: 50%;
+        }
+        audio::-webkit-media-controls-currnet-time-display{
+            color: black;
+        }
+        audio::-webkit-media-controls-time-remaining-display{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <audio controls loop>
+            <source src="song2.mp3">
+            <source src="song1.mp3">
+        </audio>
+    </div>
+</body>
+</html>
