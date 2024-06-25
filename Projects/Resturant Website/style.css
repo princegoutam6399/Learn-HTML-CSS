@@ -1,0 +1,36 @@
+* {
+    background-color: antiquewhite;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.head-text{
+    padding-top: 40px;
+    text-align: center;
+}
+
+.container {
+    min-height: 100vh;
+}
+
+.items {
+    margin-top: 100px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.item{
+    display:inline;
+    padding: 10px;
+}
+
+.item img {
+    width: 350px;
+    height: 290px;
+    object-fit: cover;
+    margin: 10px;
+}
+.item h4,p{
+    margin-left: 10px;
+    font-size: 20px;
+}
