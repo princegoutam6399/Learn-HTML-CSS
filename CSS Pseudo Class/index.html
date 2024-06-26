@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Class and Element</title>
+    <style>
+
+        /* Pseudo Class  */
+        p{
+            color: rgb(19, 122, 122);
+        }
+        p:first-child{
+            color: orangered;
+        }
+        p:nth-child(4){
+            color: green;
+        }
+        p:nth-child(even){
+            color: lime;
+        }
+
+        /* Pseudo Element  */
+
+        h3{
+            color: blueviolet;
+        }
+        h3::first-line{
+            background-color: lawngreen;
+        }
+        h3::first-letter{
+            background-color: rgb(252, 130, 0);
+        }
+        .box+p{
+            color: lightcoral;
+        }
+        .boxes #abc {
+            color: rgb(85, 165, 42);
+        }
+    </style>
+</head>
+<body>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+    <p>Paragraph 4</p>
+    <p>Paragraph 5</p>
+    <button>Click Me</button>
+    <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate ad voluptate reprehenderit autem facilis ullam aspernatur error nisi at architecto?</h3>
+
+    <div class="box">
+        <div class="boxes">
+            <p>Paragraph</p>
+            <div id="abc">box 1</div>
+            <div>box 2</div>
+            <div>box 3</div>
+        </div>
+    </div>
+</body>
+</html>

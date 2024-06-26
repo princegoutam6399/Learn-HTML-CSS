@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before And After Pseudo Selectors </title>
+    <style>
+        body{
+            background-color: rgb(9, 9, 9);
+            color: white;
+            background-image: url('https://source.unsplash.com/collection/190727/1600x900');
+            width: 100%;
+            height: 100vh;
+            background-size: 100% 100%;
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+        }
+
+        
+        .list{
+            display: flex;
+            justify-content: center;
+        }
+        .list li{
+
+            font-size: 20px;
+            list-style: none;
+            margin: 40px;
+            background-color: lawngreen;
+            color:black ;
+            padding: 20px;
+        }
+        section{
+            font-size: 20px;
+            text-align: center;
+        }
+        h3{
+            font-size: 40px;
+        }
+        section::before{
+            content: "This is Content";
+        }
+        section::after{
+            content: "this is After";
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="list">
+                <li>Home</li>
+                <li>About</li>
+                <li>Sevrices</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+        <section>
+            <h3>Welcome to Coding World</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci iusto amet sapiente molestias facere
+                veniam. Exercitationem veritatis culpa totam iste.</p>
+        </section>
+    </header>
+</body>
+
+</html>
