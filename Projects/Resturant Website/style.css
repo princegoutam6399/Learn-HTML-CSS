@@ -5,41 +5,50 @@
     box-sizing: border-box;
 }
 
-.navbar{
+.navbar {
     height: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.logo{
+
+.logo {
     font-size: 20px;
 }
-.list ul li{
+
+.list ul li {
     display: inline-flex;
     margin-left: 36px;
 }
 
-.head-text{
+.list ul a {
+    color: black;
+}
+
+.head-text {
     padding-top: 40px;
     text-align: center;
 }
-.top{
+
+.top {
     padding-top: 10px;
     font-size: 20px;
     font-style: italic;
 }
+
 .container {
     min-height: 100vh;
 }
 
 .items {
     margin-top: 100px;
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-.item{
-    display:inline;
+
+.item {
+    display: inline;
     padding: 10px;
 }
 
@@ -49,17 +58,49 @@
     object-fit: cover;
     margin: 10px;
 }
-.item h4,p,.cart{
+
+.item h4,
+p,
+.cart {
     margin-left: 10px;
     font-size: 20px;
     display: flex;
 }
+
 .price{
+    margin-top: 7px;
     float: left;
-    
+    color: red;
 }
-.cart button{
-    margin-left: 235px;
-    padding: 6px;
+
+.cart button {
+    border-radius: 20px;
+    margin-left: 180px;
+    padding: 9px 10px;
     cursor: pointer;
+    border: 1px solid teal;
+}
+.cart button:hover{
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+
+
+/* About Section  */
+
+.about{
+    /* background-image: url('https://images.pexels.com/photos/616358/pexels-photo-616358.jpeg?auto=compress&cs=tinysrgb&w=600'); */
+    /* background-color: yellowgreen; */
+    height: 50vh;
+    width: 100%;
+    background-size: 100% 100%;
+    object-fit: cover;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-text h2,p{
+    background: transparent;
 }
