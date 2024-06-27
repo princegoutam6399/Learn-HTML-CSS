@@ -4,11 +4,30 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.navbar{
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    font-size: 20px;
+}
+.list ul li{
+    display: inline-flex;
+    margin-left: 36px;
+}
+
 .head-text{
     padding-top: 40px;
     text-align: center;
 }
-
+.top{
+    padding-top: 10px;
+    font-size: 20px;
+    font-style: italic;
+}
 .container {
     min-height: 100vh;
 }
@@ -30,7 +49,17 @@
     object-fit: cover;
     margin: 10px;
 }
-.item h4,p{
+.item h4,p,.cart{
     margin-left: 10px;
     font-size: 20px;
+    display: flex;
+}
+.price{
+    float: left;
+    
+}
+.cart button{
+    margin-left: 235px;
+    padding: 6px;
+    cursor: pointer;
 }
