@@ -11,24 +11,34 @@
 <body>
     <div class="container">
         <!-- Navbar Start -->
+         
         <div class="navbar">
             <div class="logo">
                 <h2>Logo</h2>
             </div>
+            <input type="checkbox" id="nav-check" hidden>
+            <div class="logo-2">
+                <h2>Logo</h2>
+            </div>
             <div class="list">
                 <ul>
-                    <a href="#"><li>HOME</li></a>
-                   <a href="#"><li>ABOUT</li></a>
-                    <a href="#"><li>SERVICES</li></a>
-                    <a href="#"><li>BLOG</li></a>
-                    <a href="#"><li>CONTACT US</li></a>
+                    <li><a href="#" class="active">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">CONTACT US</a></li>
                 </ul>
             </div>
-            <div class="dashboard">
+            <!-- <div class="dashboard">
                 <div class="icon">
                     <h2>Dashboard</h2>
                 </div>
-            </div>
+            </div> -->
+            <label for="nav-check" class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
         </div>
 
         <!-- Navbar Start End-->
@@ -193,7 +203,7 @@
         
         <div class="about" id="about">
             <div class="about-text">
-                <h2>About Us</h2>
+                <h2>Contact Us</h2>
                 <p>Lorem ipsum dolor sit amet.</p>
             </div>
         </div>
