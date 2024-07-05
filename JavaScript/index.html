@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        :root {
+            --color: orange;
+            --secolor: purple;
+            --tcolor: lime;
+            --fcolor: skyblue;
+            --fivecolor: rgb(239, 167, 239);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+        }
+
+        .box-1 {
+            background: var(--color);
+        }
+
+        .box-2 {
+            background: var(--secolor);
+        }
+
+        .box-3 {
+            background: var(--tcolor);
+        }
+
+        .box-4 {
+            background: var(--fcolor);
+        }
+
+        .box-5 {
+            background: var(--fivecolor);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box-1" onclick="box1()">1</div>
+    <div class="box box-2" onclick="box2()">2</div>
+    <div class="box box-3" onclick="box3()">3</div>
+    <div class="box box-4" onclick="box4()">4</div>
+    <div class="box box-5" onclick="box5()">5</div>
+</body>
+
+<script>
+
+    function box1() {
+        document.body.style.backgroundColor = "yellow"
+        document.body.style.color='white';
+    }
+    function box5() {
+        document.body.style.backgroundColor = "blue"
+    }
+    function box2() {
+        document.body.style.backgroundColor = "seagreen"
+    }
+    function box3() {
+        document.body.style.backgroundColor = "#23fa93"
+    }
+    function box4() {
+        document.body.style.backgroundColor = "pink"
+    }
+
+</script>
+
+</html>

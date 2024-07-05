@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        :root {
+            --color: orange;
+            --secolor: purple;
+            --tcolor: lime;
+            --fcolor: skyblue;
+            --fivecolor: rgb(239, 167, 239);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            justify-content: center;
+            align-items: center;
+            /* display: flex; */
+            min-height: 100vh;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+        }
+
+        .box-1 {
+            background: var(--color);
+        }
+
+        .box-2 {
+            background: var(--secolor);
+        }
+
+        .box-3 {
+            background: var(--tcolor);
+        }
+
+        .box-4 {
+            background: var(--fcolor);
+        }
+
+        .box-5 {
+            background: var(--fivecolor);
+        }
+        .btn button{
+            margin-left: 44%;
+            padding: 10px;
+            margin: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btn">
+        <button class="btn-1" onclick="darkMode()">Dark Mode</button>
+        <button class="btn-2" onclick="lightMode()">Light Mode</button>
+    </div>
+    <div class="box box-1" onclick="box1()">1</div>
+    <div class="box box-2" onclick="box2()">2</div>
+    <div class="box box-3" onclick="box3()">3</div>
+    <div class="box box-4" onclick="box4()">4</div>
+    <div class="box box-5" onclick="box5()">5</div>
+    <div>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus vero sunt, consequuntur voluptatem
+            dolorem quasi labore similique, voluptatum exercitationem quidem vitae ratione iure dolorum dignissimos.
+            Ipsa laborum magni cupiditate ipsam, possimus quod debitis rem obcaecati deserunt iste molestias temporibus
+            dolores praesentium unde magnam non. Quod aut saepe sequi ipsa ipsum sint autem earum, praesentium tenetur
+            ab, qui repellendus, vel soluta! Labore placeat consequatur tempora harum repudiandae, aspernatur obcaecati
+            officia excepturi quasi doloribus dolorum quidem fugit praesentium sunt molestiae nihil perspiciatis nulla
+            assumenda quaerat? Numquam recusandae cum dolor odit. Explicabo itaque id nostrum velit! Molestias, dolores
+            ullam! Adipisci unde iste id!</h2><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, omnis. Rerum ad nisi molestias nobis nihil
+            eligendi illum deleniti alias omnis? Molestiae ad officiis nihil, optio natus sequi. Labore similique eum
+            iusto est quam minima, eius, itaque enim et eaque at. Minus, quibusdam sequi! Voluptas fugiat doloribus
+            deserunt culpa omnis quibusdam expedita soluta reiciendis ullam in inventore, consequatur ipsam, doloremque
+            quasi maxime? Repudiandae beatae molestias sint officia. Dicta harum eligendi labore ex officia mollitia
+            ratione deserunt reiciendis exercitationem quae qui perferendis veniam earum illo enim velit est vel sequi
+            fuga dolor minus dolores unde, corporis inventore. Soluta quaerat modi corrupti ipsa voluptate labore
+            molestiae odio quasi dignissimos, iure esse perspiciatis iste voluptas. Adipisci inventore explicabo
+            assumenda consequatur quibusdam voluptatem eum ratione, nemo, cumque atque at laboriosam ab magnam
+            consectetur rerum soluta nostrum, fugit illum excepturi cum. Architecto nemo dolorum veniam possimus, iure
+            eius, rem vel aut asperiores quos enim quibusdam earum ratione. Quisquam, tempora sequi itaque accusantium
+            reiciendis, amet magnam aliquid perferendis eius neque nam fuga molestias cupiditate animi, laudantium
+            nesciunt magni similique? Minima molestias laudantium sunt accusamus repudiandae expedita aut vel similique
+            vero culpa? Corporis explicabo voluptatibus iure non porro reprehenderit facere accusantium natus illo
+            perferendis, voluptates rem sint?</p>
+    </div>
+</body>
+
+<script>
+
+function darkMode(){
+    document.body.style.background='black';
+    document.body.style.color='white';
+    document.body.style.transition='0.2s';
+}
+function lightMode(){
+    document.body.style.background='white';
+    document.body.style.color='black';
+    document.body.style.transition='0.2s';
+}
+
+</script>
+
+</html>

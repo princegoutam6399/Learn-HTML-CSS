@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn button{
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .btn-1{
+            background-color: seagreen;
+            color: wheat;
+        }
+        .btn-2{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn">
+        <button class="btn-1" onclick="start()">Start</button>
+        <button class="btn-2 " onclick="stop()">Stop</button>
+    </div>
+    <div class="output">
+        <h2 id="out"></h2>
+    </div>
+</body>
+<script>
+    function start(){
+        var num = 100;
+        for(let i=0;i<=num;i++){
+            document.write(i);
+        } 
+    }
+
+    function stop(){
+
+    }
+</script>
+</html>
