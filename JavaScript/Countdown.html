@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        #countdown{
+            font-size: 40px;
+            background-color: rgb(95, 246, 130);
+            border-radius: 10px;
+            padding: 20px 40px;
+            color: rgb(8, 8, 8);
+        }
+    </style>
+</head>
+<body>
+    <p id="countdown"></p>
+    <script>
+
+        const strminutes = 10;
+        let time = strminutes *60;
+
+        const countdownEl = document.getElementById('countdown');
+
+        setInterval(updateCountdown,1000);
+
+        function updateCountdown(){
+            const mintues = Math.floor(time/60);
+            let sec = time%60;
+
+            sec = sec<10 ? '0' + sec :sec;
+
+            countdownEl.innerHTML = `${mintues}: ${sec}`;
+            time--;
+        }
+
+    </script>
+</body>
+</html>

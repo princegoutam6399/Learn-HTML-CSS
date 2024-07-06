@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .icon{
+            display: flex;
+            justify-content: center;
+            background-color: aquamarine;
+            cursor: pointer;
+            font-size: 25px;
+        }
+        .icon i{
+            padding: 5px;  
+        }
+        p{
+            padding: 20px;
+            font-size: 26px;
+        }
+        h3{
+            padding: 20px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="icon">
+            <i class="fa-solid fa-sun" onclick="lightMode()"></i>
+            <i class="fa-solid fa-moon" onclick="darkMode()"></i>
+        </div>
+        <div class="text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quidem beatae animi repudiandae modi, consequatur aperiam est quis perferendis explicabo ipsam quam neque culpa aut, obcaecati cumque quod nulla sequi autem dolor delectus id? Cumque quos assumenda recusandae possimus quae fugiat itaque adipisci sed quod libero perspiciatis, velit quibusdam iste debitis, distinctio optio mollitia? Non inventore amet quisquam minima, voluptatem enim fugiat cupiditate, suscipit voluptates aspernatur atque nulla eum mollitia quia perspiciatis deserunt necessitatibus culpa neque. Incidunt quisquam ratione vel. Expedita rerum, mollitia eum officiis veritatis, ea incidunt, tempore nulla hic libero culpa officia. Numquam et quibusdam exercitationem beatae, laboriosam ea odio provident ab aliquam, maiores ad iste rerum sed blanditiis dolore aspernatur perferendis quaerat explicabo, praesentium animi esse id illum. Nihil non reiciendis fuga a eveniet, doloremque dicta architecto dolor quod culpa fugit cumque, similique obcaecati! Iusto consequuntur vitae nulla dolorum itaque ex, ipsa repudiandae consectetur cupiditate qui facere doloribus totam, fuga optio omnis nostrum harum nam? Modi iste delectus ut blanditiis nostrum ex beatae id debitis et aliquid rerum laboriosam distinctio, veritatis totam porro vero perferendis nesciunt incidunt ipsam magni deleniti. Adipisci, nemo! Illum quod eveniet exercitationem alias voluptas qui beatae, sit, odio expedita, magnam officia quo voluptatibus.</p><br>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo consectetur dolorem debitis maxime vitae aliquam. Deleniti vel animi sit minus, excepturi facilis, ipsa illum dicta officiis mollitia amet quo quam, eveniet qui dignissimos facere tempore laboriosam praesentium aut reprehenderit hic veniam autem. Veritatis ex dicta a maiores asperiores labore nam eaque totam dolor, non rerum vero. Earum voluptas aut voluptates enim maiores nesciunt nisi asperiores ex vero eum. Sequi commodi, nostrum aliquam hic perferendis totam, non accusantium ex alias, nulla provident dolores quod error quas porro beatae eius dolorem ullam nam modi voluptatem nemo unde dignissimos quo? Inventore ea sequi molestias magnam eligendi dolore! Neque dicta magni amet, consectetur delectus voluptates ad sapiente magnam ducimus totam corrupti, tenetur commodi laborum aliquam incidunt eos aliquid veritatis fuga hic? Repellat iure placeat delectus. Omnis, quos, magnam provident repellendus mollitia harum repellat ad nemo aliquam reprehenderit consequuntur eveniet perferendis, quia non velit quidem incidunt corrupti! Dolorem debitis qui culpa blanditiis quae reprehenderit dolores dolor, id officia modi est in alias minima amet impedit perspiciatis dicta hic architecto placeat! Ipsa dolor velit at, voluptatum voluptas, quibusdam iste similique corporis quaerat, minus odit obcaecati. Quae qui doloremque at, facere placeat deserunt ducimus a corporis fugiat quis excepturi odio labore tempore vel ipsam quisquam! Voluptatum nam sunt perferendis. Numquam nostrum sequi molestias itaque porro. Unde consequatur laudantium ab facilis dolor! Vero et qui quos laborum numquam hic soluta iure culpa. Velit necessitatibus nisi obcaecati, quae labore, veritatis delectus earum, ducimus vero cum id? Labore ad magnam debitis error suscipit eius! Corporis quia ab facilis nobis maiores blanditiis nulla recusandae, ratione est. Quo repellendus nesciunt a provident consequuntur cum? Consequuntur, ratione distinctio sint debitis saepe mollitia unde dolores, natus expedita consequatur illo necessitatibus a animi harum officiis repellendus facere porro ab aut quis sed itaque asperiores atque!</h3>
+        </div>
+    </div>
+    <script>
+        function lightMode(){
+            document.body.style.background='white';
+            document.body.style.color='black';
+            document.body.style.transition='0.2s';
+        }
+        function darkMode(){
+            document.body.style.background='black';
+            document.body.style.color='white';
+            document.body.style.transition='0.2s';
+            document.icon.style.color='yellow';
+        }
+    </script>
+</body>
+</html>

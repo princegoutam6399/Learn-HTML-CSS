@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Counting</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fff;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 80vw;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            left: 50%;
+        }
+
+        .container {
+            width: 28vmin;
+            height: 28vmin;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 1em 0;
+            position: relative;
+            font-size: 18px;
+            border-radius: 0.5em;
+            background-color: #21224b;
+            border-bottom: 10px solid slateblue;
+        }
+
+        span.num,
+        .text {
+            color: white;
+            display: grid;
+            place-items: center;
+            font-weight: 600;
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="container">
+            <span class="num" data-val="350">000</span>
+            <span class="text">Followers</span>
+        </div>
+        <div class="container">
+            <span class="num" data-val="200">000</span>
+            <span class="text">Followers</span>
+        </div>
+        <div class="container">
+            <span class="num" data-val="300">000</span>
+            <span class="text">Followers</span>
+        </div>
+        <div class="container">
+            <span class="num" data-val="275">000</span>
+            <span class="text">Followers</span>
+        </div>
+    </div>
+    <script>
+
+        let valDisplays = document.querySelectorAll('.num');
+        let interval = 4000;
+
+        valDisplays.forEach((valDisplay) => {
+            let stValue = 0;
+
+            let endValue = parseInt(valDisplay.getAttribute("data-val"));
+
+            let duration = Math.floor(interval/endValue);
+            let counter = setInterval(function(){
+                stValue =stValue+1;
+                valDisplay.textContent =stValue;
+                if(stValue == endValue){
+                    clearInterval(counter);
+                }
+            },duration);
+        });
+    
+
+    </script>
+</body>
+
+</html>
