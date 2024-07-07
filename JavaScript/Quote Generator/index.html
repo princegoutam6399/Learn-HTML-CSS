@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .hero{
+            background-color: aquamarine;
+            width: 400px;
+            height: 300px;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .btn {
+            margin-top: 30px;
+            font-size: 20px;
+            padding: 20px 30px;
+            background-color: rgb(235, 33, 235);
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        p{
+            margin-top: 30px;
+            padding: 20px;
+            color: black;
+            font-size: 20px;
+        }
+        span{
+            padding-top: 20px;
+            color: black;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <h2>Daily Quote</h2>
+        <p id="quote"></p>
+        <span id="author"></span><br>
+        <button class="btn" onclick="getquote(api_url)">Generate Quote</button>
+    </div>
+
+    <script>
+        
+        const quote = document.getElementById('quote');
+        const author = document.getElementById('author');
+        const api_url = "https://api.quotable.io/random";
+
+        async function getquote(url) {
+            const response = await fetch(url);
+            var data = await response.json();
+            
+            quote.innerHTML = data.content;
+            author.innerHTML = data.author;
+        }
+        getquote(api_url);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #645f5f;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            background-color: aliceblue;
+            width: 500px;
+            height: 350px;
+            padding: 50px;
+            border-radius: 20px;
+        }
+
+        h2,
+        p {
+            background: transparent;
+        }
+
+        p {
+            font-size: 20px;
+            margin-top: 40px;
+        }
+
+        button {
+            padding: 15px;
+            background-color: burlywood;
+            border: none;
+            border-radius: 15px;
+            margin-top: 50px;
+            cursor: pointer;
+            font-size: 17px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="container">
+            <h2>Random Password Generator</h2>
+            <p id="showPass"> </p>
+            <button onclick="showPassword()">Generate Password</button>
+        </div>
+    </div>
+
+    <script>
+
+        function generatePass() {
+            let pass = ' ';
+            let str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&';
+
+            for(let i=1;i<8;i++){
+                let char = Math.floor(Math.random() * str.length);
+                pass = pass+str.charAt(char);
+            }
+            return pass;
+        }
+
+        function showPassword(){
+            let generatePassword = generatePass();
+            document.getElementById('showPass').textContent = generatePassword;
+        }
+
+       
+
+    </script>
+</body>
+
+</html>
