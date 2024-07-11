@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.text {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.text h2 {
+    color: sandybrown;
+}
+
+.text i {
+    color: black;
+    margin-right: 40px;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.items {
+    margin-top: 70px;
+    display: grid;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-template-columns: 15rem 15rem 15rem;
+    gap: 20px;
+
+}
+
+.item-img {
+    background-color: #e6d4d4;
+}
+
+.item-img img {
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.food-info {
+    text-align: center;
+}
+
+.btn {
+    background-color: rgb(9, 9, 9);
+    color: white;
+    cursor: pointer;
+    padding: 5px 50px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+
+
+/* Card Page  */
+
+.card-page{
+    margin: 20px ;
+    width: 400px;
+    height: 100vh;
+    /* background-color: #333; */
+
+}
+.card-text{
+    text-align: center;
+}
+
+.card-item {
+    justify-content: center;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.card-item img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.card-info {
+    margin-left: 20px;
+}
+
+.card-info a{
+    color: sandybrown;
+}
+
+hr{
+    background-color: sandybrown;
+    height: 5px;
+    border: none;
+    width: 340px;
+    margin-left: 90px;
+    margin-bottom: 30px;
+}
+
+.total{
+    margin-left: 90px;
+}
