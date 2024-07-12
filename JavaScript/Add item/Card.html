@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Items Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        body{
+            background-color: lavenderblush;
+        }
+        .container{
+            margin: auto;
+            transition: 0.5s;
+            width: 500px;
+            max-width: 90vw;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            cursor: pointer;
+            height: 80px;
+            width: 100%;
+        }
+        .basket{
+            position: relative;
+        }
+        .basket span{
+            background-color: red;
+            color: white;
+            padding: 0 8px;
+            position: absolute;
+            border-radius: 50%;
+            left: 20px;
+            top: -15px;
+        }
+        .products{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            justify-content: center;
+            column-gap: 25px;
+            row-gap: 25px;
+            margin: 10px 30px;
+            padding: 0 55px;
+        }
+        .products img{
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            filter: drop-shadow(10px 10px 5px #d3d3d3);
+            border-radius: 10px;
+
+        }
+        .products img:hover{
+            scale: 1.1;
+            transition: 0.5s;
+        }
+
+        .products .item .name{
+            font-weight: 600;
+        }
+        .products .item .price{
+            margin: 10px;
+        }
+        .products .item button{
+            background-color: #343432;
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+        }
+
+
+        .products .item{
+            text-align: center;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0px 50px #757576;
+        }
+
+        .cart{
+            position:fixed;
+            top: 0;
+            right: 100%;
+            width: 300px;
+            background-color: #453e3b;
+            height: 90vh;
+            transition: 0.5s;
+
+        }
+        .cart h3{
+            font-weight: 100;
+            text-align: center;
+            color: #fff;
+            margin-top: 10px;
+        }
+        .cart .checkout{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+        .cart .checkout div{
+            width: 100%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: beige;
+        }
+        .checkout .total{
+            padding:10px;
+        }
+
+        .cart .checkout .close{
+            /* margin-left: 30px; */
+            background-color: #111;
+            color: #fff;
+            width: 220px;
+
+        }
+       .active .cart{
+            right: 5%;
+            transition: 0.4s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>The Food Shop</h2>
+            <div class="basket">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="qty">0</span>
+            </div>
+        </header>
+
+        <div class="products"> </div>
+        <div class="cart">
+            <h3>Your Cart</h3>
+            <ul class="productlist"></ul>
+            <div class="checkout">
+                <div class="total">
+                    <small>Subtotal (0 items)</small>
+                    $0
+                    <div class="close">Close</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let arrProducts=[
+            {
+                id:1,
+                name:"burger",
+                image:"img1.jpg",
+                price:"20.00"
+            },
+            {
+                id:2,
+                name:"burger",
+                image:"img2.jpg",
+                price:"20.00"
+            },
+            {
+                id:3,
+                name:"burger",
+                image:"img3.jpg",
+                price:"20.00"
+            },
+            {
+                id:4,
+                name:"burger",
+                image:"img4.jpg",
+                price:"20.00"
+            },
+            {
+                id:5,
+                name:"burger",
+                image:"img5.jpg",
+                price:"30.00"
+            },
+            {
+                id:6,
+                name:"burger",
+                image:"img6.jpg",
+                price:"25.00"
+            },
+        ]
+
+        const body = document.querySelector("body"),
+        products = document.querySelector(".products"),
+        shoppBasket = document.querySelector(".basket"),
+        closeCart = document.querySelector(".close"),
+        porductList = document.querySelector(".productlist");
+
+        let checkOutList = [];
+
+        shoppBasket.onclick=()=>{
+            body.classList.add("active");
+        }
+        shoppBasket.onclick=()=>{
+            body.classList.remove("active");
+        }
+
+
+        function onClick(){
+            arrProducts.forEach((item,key)=>{
+                let div = document.createElement("div");
+                div.classList.add("item");
+
+                div.innerHTML = `
+                <img src ="image/${item.image}"/>
+                <div class="name">${item.name}</div>
+                <div class="price"><small>$</small>${item.price}</div>
+                <button onclick="addToCart(${key})"><i class="fa fa-cart-plus"></i> Add to Cart </button>
+                `;
+
+                products.appendChild(div);
+                
+            });
+        }
+        onClick();
+
+
+        function addToCart(Id){
+            // console.log(arrProducts[Id]);
+            if(checkOutList[Id]==null){
+                checkOutList[Id] = arrProducts[Id];
+            }
+            reloadCart();
+        }
+
+
+        function reloadCart(){
+            porductList.innerHTML = "";
+            checkOutList.forEach((key,item)=>{
+                console.log(item);
+            })
+        }
+
+    </script>
+</body>
+</html>
