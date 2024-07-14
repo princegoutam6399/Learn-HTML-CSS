@@ -1,11 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            background: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .music-player {
+            background: #ffe0e5;
+            width: 400px;
+            padding: 25px 35px;
+            text-align: center;
+
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        nav .circle {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            background: #fff;
+            color: #f53192;
+            box-shadow: 0 5px 10px rgba(255, 26, 26, 0.22);
+        }
+
+        .song-img {
+            width: 220px;
+            border-radius: 50%;
+            border: 8px solid #fff;
+            box-shadow: 0 5px 10px rgba(255, 26, 26, 0.22);
+        }
+
+        .music-player h1 {
+            font-size: 20px;
+            font-weight: 400;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .music-player p {
+            font-size: 14px;
+            color: #333;
+        }
+
+        #progress {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 6px;
+            background: #f53192;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 40px 0;
+        }
+
+        #progress::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            background: #f53192;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 8px solid #fff;
+            box-shadow: 0 5px 5px rgba(255, 26, 26, 0.22);
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .controls div {
+            width: 60px;
+            height: 60px;
+            margin: 20px;
+            background: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: #f53192;
+            box-shadow: 0 5px 5px rgba(255, 26, 26, 0.22);
+            cursor: pointer;
+        }
+
+        .controls div:nth-child(2) {
+            transform: scale(1.5);
+            background: #f53192;
+            color: #fff;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="music-player">
+            <nav>
+                <div class="circle">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div class="circle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+            <img src="/JavaScript/Music Player/img1.png" class="song-img">
+            <h1>Dil Dariyan</h1>
+            <p>Kambi</p>
+
+            <audio id="song">
+                <source src="/JavaScript/Music Player/song1.mp3" type="audio/mpeg">
+                <source src="/JavaScript/Music Player/song2.mp3" type="audio/mpeg">
+            </audio>
+            <input type="range" value="0" id="progress">
+
+
+            <div class="controls">
+                <div onclick="playPre()">
+                    <i class="fa-solid fa-backward"></i>
+                </div>
+                <div onclick="playPause()">
+                    <i class="fa-solid fa-play-circle" id="control-icon"></i>
+                </div>
+                <div onclick="playNext()">
+                    <i class="fa-solid fa-forward"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+        let progress = document.getElementById("progress");
+        let song = document.getElementById("song");
+        let ctlIcon = document.getElementById("control-icon");
+
+        song.onloadedmetadata = function () {
+            progress.max = song.duration;
+            progress.value = song.currentTime;
+        }
+
+
+        function playPause() {
+            if (ctlIcon.classList.contains("fa-pause")) {
+                song.pause();
+                ctlIcon.classList.remove("fa-pause");
+                ctlIcon.classList.add("fa-play");
+            } else {
+                song.play();
+                ctlIcon.classList.add("fa-pause");
+                ctlIcon.classList.remove("fa-play");
+            }
+        }
+
+        if (song.play()) {
+            setInterval(() => {
+                progress.value = song.currentTime;
+            }, 5000);
+        }
+
+        progress.onchange = function () {
+            song.play();
+            song.currentTime = progress.value;
+            ctlIcon.classList.add("fa-pause");
+            ctlIcon.classList.remove("fa-play");
+        }
+
+
+        let songs = [
+            "/JavaScript/Music Player/song1.mp3",
+            "/JavaScript/Music Player/song2.mp3",
+        ];
+
+        let currentSongIndex = 0;
+
+        function playNext() {
+            currentSongIndex++;
+            if (currentSongIndex >= songs.length) {
+                currentSongIndex = 0; 
+            }
+            song.src = songs[currentSongIndex];
+            song.play();
+            updateControls(); 
+        }
+
+        function playPre() {
+            currentSongIndex--;
+            if (currentSongIndex < 0) {
+                currentSongIndex = songs.length - 1; 
+            }
+            song.src = songs[currentSongIndex];
+            song.play();
+            updateControls();
+        }
+
+
+
+
+    </script>
+
+
 </body>
+
 </html>
