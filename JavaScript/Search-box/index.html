@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       
+        .search-container{
+            text-align: center;
+            margin: 40px;
+        }
+        input{
+            margin-top: 10px;
+            width: 300px;
+            height: 30px;
+            padding: 10px;
+        }
+        .user-data{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .card{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            border: 1px solid black;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <h2>Search Users</h2>
+        <input type="search" id="search" onkeyup="searchFun()">
+    </div>
+    <div class="user-data" id="user-data">
+        <div class="card">
+            <h2>Hello</h2>
+            <p>abc@gmail.com</p>
+        </div>
+        <div class="card">
+            <h2>John</h2>
+            <p>John@gmail.com</p>
+        </div>
+        <div class="card">
+            <h2>Doe</h2>
+            <p>doe@gmail.com</p>
+        </div>
+        <div class="card">
+            <h2>Bob</h2>
+            <p>bob@gmail.com</p>
+        </div>
+        <div class="card">
+            <h2>Adam</h2>
+            <p>adamgmail.com</p>
+        </div>
+        <div class="card">
+            <h2>Rahul</h2>
+            <p>rahul@gmail.com</p>
+        </div>
+    </div>
+
+<script>
+
+
+    const searchFun = () =>{
+        const searchBox = document.getElementById("search").value.toUppercase();
+        const namesData = document.getElementById("user-data");
+        const name = document.querySelectorAll(".card");
+        const heading = document.getElementsByTagName("h2");
+
+        for(var i=0;i<heading.length;i++){
+            let match = name[i].getElementsByTagName('h2')[0];
+
+            if(match){
+               let textValue = match.textContent || match.innerHTML
+
+               if(textValue.toUpperCase().indexOf(searchBox) > -1){
+                name[i].style.display = "";
+               }else{
+                name[i].style.display = "none";
+               }
+            }
+        }
+    }
+
+
+</script>
+
+</body>
+</html>
