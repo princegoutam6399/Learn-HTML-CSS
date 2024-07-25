@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        body{
+            background-color: #888;
+        }
+        #accordion{
+            margin: 100px auto;
+            width: 600px;
+        }
+        #accordion li{
+            width: 100%;
+            background-color: #fff;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        #accordion li label{
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            color: #ce2222;
+        }
+        #accordion li label span{
+            transform: rotate(90deg);
+            font-size: 22px;
+            color: black;
+        }
+        #accordion label + input[type="radio"]{
+            display: none;
+        }
+        #accordion .content{
+            padding: 0 10px;
+            line-height:26px ;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s;
+        }
+        #accordion label + input[type="radio"]:checked + .content{
+            max-height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="accordion">
+        <li><label for="first">What is Accordion? <span>&#x3e;</span> </label>
+            <input type="radio" name="accordion" id="first" checked>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque neque dicta unde magnam reprehenderit deleniti, aut inventore beatae provident magni iste nisi ipsa libero quis eum, fugit tempore architecto mollitia.</p>
+            </div>
+        </li>
+        <li><label for="second">How to create <span>&#x3e;</span> </label>
+            <input type="radio" name="accordion" id="second" >
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque neque dicta unde magnam reprehenderit deleniti, aut inventore beatae provident magni iste nisi ipsa libero quis eum, fugit tempore architecto mollitia.</p>
+            </div>
+        </li>
+        <li><label for="third">Accordion use ? <span>&#x3e;</span> </label>
+            <input type="radio" name="accordion" id="third">
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque neque dicta unde magnam reprehenderit deleniti, aut inventore beatae provident magni iste nisi ipsa libero quis eum, fugit tempore architecto mollitia.</p>
+            </div>
+        </li>
+    </ul>
+</body>
+
+</html>
