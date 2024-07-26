@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Plus-Icon To View Text</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        .container {
+            width: 800px;
+        }
+        .container h1{
+            text-align: center;
+            font-weight: 800;
+            font-size: 40px;
+        }
+
+        .faq {
+            width: 100%;
+            background-color: #e3ecd8;
+            margin: 20px;
+            border: 2px solid black;
+        }
+
+        .que-title {
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .ques-ans {
+            width: 90%;
+            margin-left: 20px;
+            font-size: 20px;
+            display: none;
+            transition: 0.4s;
+            padding: 5px;
+        }
+
+        #down-arrow {
+            cursor: pointer;
+        }
+
+        .faq-active .ques-ans{
+            display: block;
+        }
+        .faq-active #down-arrow{
+            transform: rotate(-180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>FAQ</h1>
+        <div class="faq">
+            <div class="que-title">
+                <p>What is the html</p>
+                <span id="down-arrow"><i
+                    class="fa-solid fa-angle-down"></i></span>
+            </div>
+            <div class="ques-ans">
+                <p>HTML, or Hypertext Markup Language, is a markup language used to create and structure web pages. It's a combination of hypertext, which defines links between web pages, and markup language, which uses tags to define text documents and structure web pages.</p>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="que-title">
+                <p>What is CSS? </p>
+                <span id="down-arrow"><i
+                    class="fa-solid fa-angle-down"></i></span>
+            </div>
+            <div class="ques-ans">
+                <p>Cascading Style Sheets is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML or XML.</p>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="que-title">
+                <p>What is the JavaScript</p>
+                <span id="down-arrow"><i
+                    class="fa-solid fa-angle-down"></i></span>
+            </div>
+            <div class="ques-ans">
+                <p>JavaScript (JS) is a programming language that allows developers to add interactive features to web pages, applications, and more.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+
+        const faqs = document.querySelectorAll(".faq");
+
+        faqs.forEach((faq)=>{
+            faq.addEventListener("click",()=>{
+                faq.classList.toggle("faq-active");
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>
