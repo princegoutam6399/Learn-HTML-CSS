@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Finder</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        body{
+            background-color: #222;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            padding: 20px;
+            background-color: #fff;
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+        }
+        .box{
+            margin-top: 50px;
+        }
+        #inputBox{
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 4px;
+        }
+        .box button{
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            background-color: rgb(101, 101, 255);
+            border: none;
+            margin-top: 30px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        #outputBox{
+            margin-top: 30px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <input type="number" placeholder="Enter Your Number" id="inputBox"><br>
+            <button onclick="findLocation()">Find Location</button>
+            <h2 id="outputBox"></h2>
+        </div>
+    </div>
+
+
+    <script>
+
+        var inputBox = document.getElementById("inputBox");
+        var outputBox = document.getElementById("outputBox");
+
+
+        function findLocation(){
+            
+        }
+
+    </script>
+</body>
+</html>

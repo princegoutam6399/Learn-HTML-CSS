@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otp Genrator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #555;
+        }
+        .container{
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            background-color: #fff;
+            width: 300px;
+            height: 300px;
+        }
+        .data-box{
+            font-size: 20px;
+            margin-top: 30px;
+        }
+        .data-box button{
+            border-radius: 10px;
+            padding: 10px 50px;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            background-color:skyblue;
+        }
+        #otpBox{
+            border: 1px solid skyblue;
+            border-radius: 10px;
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+   
+   <div class="container">
+        <h2>OTP generator</h2>
+        <div class="data-box">
+            <button onclick="generateOtp()">Genrate OTP</button><br>
+            <input type="text" id="otpBox" placeholder="Enter OTP">
+        </div>
+   </div>
+
+   <script>
+
+    var otpBox = document.getElementById("otpBox");
+
+    function generateOtp(){
+        let otp = "";
+        otp = Math.floor(Math.random() * 9000);
+       otpBox.value = otp;
+       console.log(otpBox);
+    }
+    
+
+   </script>
+    
+</body>
+</html>

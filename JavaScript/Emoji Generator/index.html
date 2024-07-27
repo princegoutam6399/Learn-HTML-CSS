@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Emoji Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        #emojis {
+            margin-top: 10px;
+            width: 400px;
+            padding: 8px 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Emoji Generator</h1>
+    <select id="emojis">
+        <option value="">Select Emoji Type</option>
+        <option value="face">Face</option>
+        <option value="heart">Heart</option>
+        <option value="fruits">Fruit</option>
+        <option value="flower">Flower</option>
+        <option value="key">Key</option>
+    </select>
+
+
+    <script>
+
+        let emojis = document.querySelector("#emojis");
+        let section = document.querySelector("section");
+        let h2 = document.querySelector("h2");
+
+        emojis.addEventListener("change", () => {
+            let x = 0;
+            if (emojis.value === 'face') {
+                let i = 128511;
+                section.innerHTML = "";
+                while (x <= 68) {
+                    x++;
+                    i++;
+                    section.innerHTML += "<span>&#" + i + ";</span>";
+                    h2.innerHTML = "Face Emojis";
+                }
+            }
+            // if(emojis.value==='fruit'){
+            //     let i=127810;
+            //     section.innerHTML = "";
+            //     while(x<=10){
+            //         x++;
+            //         i++;
+            //         section.innerHTML+="<span>&#"+i+";</span>";
+            //         h2.innerHTML = "Fruits Emojis";
+            //     }
+            // }
+            // if(emojis.value==='heart'){
+            //     let i=128147;
+            //     section.innerHTML = "";
+            //     while(x<=10){
+            //         x++;
+            //         i++;
+            //         section.innerHTML+="<span>&#"+i+";</span>";
+            //         h2.innerHTML = "Heart Emojis";
+            //     }
+            // }
+            // if(emojis.value==='flower'){
+            //     let i=127799;
+            //     section.innerHTML = "";
+            //     while(x<=10){
+            //         x++;
+            //         i++;
+            //         section.innerHTML+="<span>&#"+i+";</span>";
+            //         h2.innerHTML = "Flower Emojis";
+            //     }
+            // }
+            // if(emojis.value==='key'){
+            //     let i=128271;
+            //     section.innerHTML = "";
+            //     while(x<4){
+            //         x++;
+            //         i++;
+            //         section.innerHTML+="<span>&#"+i+";</span>";
+            //         h2.innerHTML = "Key Emojis";
+            //     }
+            // }
+        });
+
+    </script>
+</body>
+
+</html>
